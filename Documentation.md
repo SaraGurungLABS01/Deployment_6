@@ -1,6 +1,8 @@
-## Purpose
+# Purpose
 
-# Downloading and uploading the files to a new repository
+# Steps
+
+## Downloading and uploading the files to a new repository
 
 1. **Clone the source repository:**
    - Clone the repository with `git clone https://github.com/kura-labs-org/c4_deployment-6.git`.
