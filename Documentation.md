@@ -1,5 +1,3 @@
-<img width="1351" alt="Screen Shot 2023-10-30 at 8 56 05 AM" src="https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/d97def08-ad10-4e8c-9720-35ef077e9b66">
-
 
 
 # Purpose
@@ -135,6 +133,10 @@ To efficiently manage and distribute traffic across your application's instances
 For detailed instructions on creating an Application Load Balancer with Target Groups for EC2 instances, please refer to the following link:
 
 [Creating Load Balancer with Target Groups for EC2 Instances](https://scribehow.com/shared/Creating_Load_Balancer_with_Target_Groups_for_EC2_Instances__WjPUNqE4SLCpkcYRouPjjA)
+
+
+<img width="1351" alt="Screen Shot 2023-10-30 at 8 56 05 AM" src="https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/d97def08-ad10-4e8c-9720-35ef077e9b66">
+
 
 
 ## Optimization
