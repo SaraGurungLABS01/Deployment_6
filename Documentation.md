@@ -1,6 +1,6 @@
 # Purpose
 
-# Steps
+This documentation serves the essential purpose of facilitating the deployment and effective management of the Retail Banking platform. It encompasses a comprehensive set of tasks and procedures, ranging from Git version control and Jenkins automation to AWS resource configuration and database integration. The document offers a clear roadmap for setting up the underlying infrastructure and deploying the application, with a focus on creating and managing Git branches tailored to different regions. It also emphasizes the secure configuration of AWS credentials within Jenkins for streamlined automation. This guide provides detailed insights and step-by-step instructions to ensure a seamless and well-managed deployment process, catering to the unique demands of the Retail Banking platform.# Steps
 
 ## Downloading and uploading the files to a new repository
 
