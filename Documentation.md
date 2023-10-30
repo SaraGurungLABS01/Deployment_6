@@ -1,4 +1,6 @@
-![image](https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/09f13dba-242c-4e97-b256-b4b4aaf4829d)
+<img width="1351" alt="Screen Shot 2023-10-30 at 8 56 05 AM" src="https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/d97def08-ad10-4e8c-9720-35ef077e9b66">
+
+
 
 # Purpose
 
