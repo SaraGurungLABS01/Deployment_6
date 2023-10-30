@@ -1,4 +1,4 @@
-![System Diagram](https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/7089c57e-0a10-4c65-bd2d-d20698aad2b3)
+![image](https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/09f13dba-242c-4e97-b256-b4b4aaf4829d)
 
 # Purpose
 
