@@ -1,6 +1,6 @@
-access_key = ""
+aws_access_key = ""
 
-secret_key = ""
+aws_secret_key = ""
 
 ami = "ami-0fc5d935ebf8bc3bc"
 
