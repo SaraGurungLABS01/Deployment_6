@@ -1,3 +1,5 @@
+![System Diagram](https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/7089c57e-0a10-4c65-bd2d-d20698aad2b3)
+
 # Purpose
 
 This documentation serves the essential purpose of facilitating the deployment and effective management of the Retail Banking platform. It encompasses a comprehensive set of tasks and procedures, ranging from Git version control and Jenkins automation to AWS resource configuration and database integration. The document offers a clear roadmap for setting up the underlying infrastructure and deploying the application, with a focus on creating and managing Git branches tailored to different regions. It also emphasizes the secure configuration of AWS credentials within Jenkins for streamlined automation. This guide provides detailed insights and step-by-step instructions to ensure a seamless and well-managed deployment process, catering to the unique demands of the Retail Banking platform.# Steps
