@@ -132,3 +132,8 @@ For detailed instructions on creating an Application Load Balancer with Target G
 
 [Creating Load Balancer with Target Groups for EC2 Instances](https://scribehow.com/shared/Creating_Load_Balancer_with_Target_Groups_for_EC2_Instances__WjPUNqE4SLCpkcYRouPjjA)
 
+
+## Optimization
+
+To optimize this deployment, we can implement Infrastructure as Code (IaC) best practices. We should modularize our Terraform code to improve maintainability and reusability, enabling easier scaling and management of infrastructure components.  Implementing an auto-scaling strategy allows us to handle varying loads efficiently. Additionally, we can leverage AWS Identity and Access Management (IAM) roles for enhanced security instead of using AWS access keys, reducing potential security risks. Lastly, we should incorporate continuous integration/continuous deployment (CI/CD) pipelines with Jenkins to automate and streamline application updates, ensuring a more efficient and responsive deployment pipeline.
+
