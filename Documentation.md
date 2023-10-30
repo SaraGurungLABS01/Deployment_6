@@ -109,4 +109,13 @@ git checkout main
  git checkout -b second-west
 ```
 
+## Creating a multibranch pipeline and running the Jenkinsfile
+
+Created a multi branch pipeline to run the Jenkinsfile and deploy the Retail Banking application across all the instances in us-east-1 and us-west-2
+
+Result: Successful
+
+<img width="1130" alt="Screen Shot 2023-10-30 at 2 18 40 AM" src="https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/20c68faa-2063-4595-859d-f1087c4a2eaf">
+
+<img width="971" alt="Screen Shot 2023-10-30 at 2 21 07 AM" src="https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/998e013c-0226-48f5-b16c-ec7cccd93031">
 
