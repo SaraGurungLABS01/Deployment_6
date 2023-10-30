@@ -121,3 +121,14 @@ Result: Successful
 
 
 ## Application load balancer for us-east-1 and us-west-2
+
+A load balancer plays a pivotal role in distributing network traffic efficiently across multiple servers or resources. Its importance lies in enhancing system availability, reliability, and scalability. By evenly distributing incoming requests, load balancers prevent server overloads, reduce downtime, and provide a seamless user experience, crucial for high-performance applications and websites. Moreover, load balancers improve security, as they can detect and mitigate malicious traffic. In essence, load balancers are a fundamental component for maintaining the performance and dependability of modern web applications and services.
+
+## Application Load Balancer for us-east-1 and us-west-2
+
+To efficiently manage and distribute traffic across your application's instances in both the us-east-1 and us-west-2 regions, an Application Load Balancer with Target Groups is set up. This component ensures high availability and scalability of your application.
+
+For detailed instructions on creating an Application Load Balancer with Target Groups for EC2 instances, please refer to the following link:
+
+[Creating Load Balancer with Target Groups for EC2 Instances](https://scribehow.com/shared/Creating_Load_Balancer_with_Target_Groups_for_EC2_Instances__WjPUNqE4SLCpkcYRouPjjA)
+
