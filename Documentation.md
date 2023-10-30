@@ -96,3 +96,17 @@ To ensure seamless functionality between your application and the AWS RDS databa
 To securely configure AWS credentials in Jenkins for the automation purpose, please refer to the following link for step-by-step instructions: [How to Configure AWS credentials in  Jenkins](https://scribehow.com/shared/How_to_Securely_Configure_AWS_Access_Keys_in_Jenkins__MNeQvA0RSOWj4Ig3pdzIPw)https://scribehow.com/shared/How_to_Securely_Configure_AWS_Access_Keys_in_Jenkins__MNeQvA0RSOWj4Ig3pdzIPw
 
 Configuring AWS credentials in Jenkins is essential as it enables the integration of AWS services with your automation tasks, ensuring secure access to resources. This configuration enhances security by managing access keys within Jenkins, reducing unauthorized access risks, and streamlines automation, allowing Jenkins to efficiently perform AWS-related tasks in your workflows, ultimately improving productivity and facilitating seamless cloud operations.
+
+## Create a Different Git Branch for the us-west-2
+
+In this deployment, Git is leveraged for creating dedicated branches, each functioning as an isolated repository for the application's source code across various regions. Every branch is meticulously structured to house a single Terraform file, streamlining the process of implementing region-specific alterations. This approach not only ensures efficient management of region-specific changes but also enables a versatile development process, adaptable to the unique requirements of any region.
+the main purpose for this is to serve
+
+```shell
+git checkout main
+ ```
+```shell
+ git checkout -b second-west
+```
+
+
