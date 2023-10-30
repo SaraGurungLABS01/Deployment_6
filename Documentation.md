@@ -50,10 +50,32 @@ To deploy EC2 instances in both the `us-east-1` and `us-west-2` regions, two key
    - Provide a name for the key pair, for example, "us-east-1-keypair," and select the "RSA" key pair type.
    - Click the "Create Key Pair" button.
 
-## 3. Jenkins Agents
+## Jenkins Agents
 
 Jenkins, a versatile open-source automation server, serves as a powerful tool for building, testing, and deploying code while efficiently distributing workloads. In this context, we're utilizing Jenkins Agents to automate Terraform steps for provisioning our infrastructure.
 
 ### Creating a New Jenkins Agent Node
 
 [Step-by-Step Guide - Creating an Agent in Jenkins](https://scribehow.com/shared/Step-by-step_Guide_Creating_an_Agent_in_Jenkins__xeyUT01pSAiWXC3qN42q5w)
+
+## Infrastructure Setup and Application Deployment
+
+By utilizing Jenkins Agents, we streamline the provisioning process, enhance resource utilization, and improve the overall efficiency of the infrastructure setup.
+
+This section outlines the steps to create two Virtual Private Clouds (VPCs) in different regions and provision the necessary components within each VPC. 
+
+### Step 1: Create VPCs and Components
+
+#### VPC in US-east-1 & US-west-2
+
+Use Terraform to create a VPC in the given regions with the following components:
+
+- 2 Availability Zones (AZs)
+- 2 Public Subnets
+- 2 EC2 Instances
+- 1 Route Table
+- Security Group allowing incoming traffic on ports 22 (SSH) and 8000 (for the application).
+
+### Step 2: User Data Script
+
+For each EC2 instance within the VPCs, refer to the existing `appsetup.sh` script to install the required dependencies and deploy the Banking application. 
