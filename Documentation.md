@@ -115,9 +115,9 @@ Created a multi branch pipeline to run the Jenkinsfile and deploy the Retail Ban
 
 Result: Successful
 
-<img width="1130" alt="Screen Shot 2023-10-30 at 2 18 40 AM" src="https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/20c68faa-2063-4595-859d-f1087c4a2eaf">
-
 <img width="971" alt="Screen Shot 2023-10-30 at 2 21 07 AM" src="https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/998e013c-0226-48f5-b16c-ec7cccd93031">
 
+<img width="1252" alt="Screen Shot 2023-10-30 at 2 24 18 AM" src="https://github.com/SaraGurungLABS01/Deployment_6/assets/140760966/6ef82bae-8634-4fa6-8943-1a2e397594ac">
 
 
+## Application load balancer for us-east-1 and us-west-2
