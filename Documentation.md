@@ -79,3 +79,14 @@ Use Terraform to create a VPC in the given regions with the following components
 ### Step 2: User Data Script
 
 For each EC2 instance within the VPCs, refer to the existing `appsetup.sh` script to install the required dependencies and deploy the Banking application. 
+
+
+## Creating an RDS Database
+
+Please refer to the following link for step-by-step instructions:
+
+[How to Create an AWS RDS Database](https://scribehow.com/shared/How_to_Create_an_AWS_RDS_Database__zqPZ-jdRTHqiOGdhjMI8Zw)
+
+## Updating Database Endpoints
+
+To ensure seamless functionality between your application and the AWS RDS database an update to the MySQL endpoints in your application files was made. By making these adjustments, a secure connection was established to the RDS database, allowing the application to efficiently store, retrieve, and manage data. Key areas to modify include the `DATABASE_URL` configuration in the application files, `database.py`, `load_data.py`, and `app.py`. This ensures that the application operates correctly and utilizes the RDS database effectively, enabling smooth data management and proper application functionality.
