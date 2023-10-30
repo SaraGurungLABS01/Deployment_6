@@ -11,36 +11,36 @@ provider "aws" {
 ###################################-CREATING EC2 INSTANCES-###################################
 
 #EC2 instance 1
-resource "aws_instance" "bank_app" {
+resource "aws_instance" "bank_app_west" {
   ami                         = var.ami
   instance_type               = var.instance_type
-  vpc_security_group_ids      = [aws_security_group.dep6_east_sg.id]
-  subnet_id                   = aws_subnet.Deployment6_public_subnet1_east.id
+  vpc_security_group_ids      = [aws_security_group.dep6_west_sg.id]
+  subnet_id                   = aws_subnet.Deployment6_public_subnet1_west.id
   key_name                    = var.key_name
   associate_public_ip_address = true # Enable Auto-assign public IP
 
  user_data = "${file("appsetup.sh")}"
 
   tags = {
-    "Name" : "Bank_App_East1"
+    "Name" : "Bank_App_West1"
   }
 
 }
 
 #EC2 instance 2
 
-resource "aws_instance" "bank_app2" {
+resource "aws_instance" "bank_app2_west" {
   ami                         = var.ami
   instance_type               = var.instance_type
-  vpc_security_group_ids      = [aws_security_group.dep6_east_sg.id]
-  subnet_id                   = aws_subnet.Deployment6_public_subnet2_east.id
+  vpc_security_group_ids      = [aws_security_group.dep6_west_sg.id]
+  subnet_id                   = aws_subnet.Deployment6_public_subnet2_west.id
   key_name                    = var.key_name
   associate_public_ip_address = true # Enable Auto-assign public IP
 
  user_data = "${file("appsetup.sh")}"
 
   tags = {
-    "Name" : "Bank_App_East2"
+    "Name" : "Bank_App_West2"
   }
 
 }
@@ -50,12 +50,12 @@ resource "aws_instance" "bank_app2" {
 
 #create vpc
 
-resource "aws_vpc" "Deployment6_VPC_us_east" {
+resource "aws_vpc" "Deployment6_VPC_us_west" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
 
   tags = {
-    Name = "Deployment6_VPC_us_east"
+    Name = "Deployment6_VPC_us_west"
   }
 }
 
@@ -67,26 +67,26 @@ resource "aws_vpc" "Deployment6_VPC_us_east" {
 
 # Subnet-1
 
-resource "aws_subnet" "Deployment6_public_subnet1_east" {
-  vpc_id            = aws_vpc.Deployment6_VPC_us_east.id
+resource "aws_subnet" "Deployment6_public_subnet1_west" {
+  vpc_id            = aws_vpc.Deployment6_VPC_us_west.id
   cidr_block        = "10.0.1.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = "us-west-2a"
   map_public_ip_on_launch = true 
 
   tags = {
-    Name = "Deployment6_public_subnet1_east"
+    Name = "Deployment6_public_subnet1_west"
   }
 }
 
 #Subnet-2
 
-resource "aws_subnet" "Deployment6_public_subnet2_east" {
-  vpc_id            = aws_vpc.Deployment6_VPC_us_east.id
+resource "aws_subnet" "Deployment6_public_subnet2_west" {
+  vpc_id            = aws_vpc.Deployment6_VPC_us_west.id
   cidr_block        = "10.0.2.0/24"
-  availability_zone = "us-east-1b"
+  availability_zone = "us-west-2b"
 
   tags = {
-    Name = "Deployment6_public_subnet2_east"
+    Name = "Deployment6_public_subnet2_west"
   }
 }
 
@@ -96,8 +96,8 @@ resource "aws_subnet" "Deployment6_public_subnet2_east" {
 
 #Security Group 
 
-resource "aws_security_group" "dep6_east_sg" {
-  vpc_id = aws_vpc.Deployment6_VPC_us_east.id
+resource "aws_security_group" "dep6_west_sg" {
+  vpc_id = aws_vpc.Deployment6_VPC_us_west.id
 
 
   ingress {
@@ -127,7 +127,7 @@ resource "aws_security_group" "dep6_east_sg" {
 
 
   tags = {
-    "Name" : "dep6_east_sg"
+    "Name" : "dep6_west_sg"
     "Terraform" : "true"
   }
 
@@ -137,11 +137,11 @@ resource "aws_security_group" "dep6_east_sg" {
 
 #create internet gateway
 
-resource "aws_internet_gateway" "Dep6_east_gw" {
-  vpc_id = aws_vpc.Deployment6_VPC_us_east.id
+resource "aws_internet_gateway" "Dep6_west_gw" {
+  vpc_id = aws_vpc.Deployment6_VPC_us_west.id
 
   tags = {
-    Name = "IGW_D6_east"
+    Name = "IGW_D6_west"
   }
 }
 
@@ -150,11 +150,11 @@ resource "aws_internet_gateway" "Dep6_east_gw" {
 #create route table
 
 
-resource "aws_default_route_table" "Dep6_east_RT" {
-  default_route_table_id = aws_vpc.Deployment6_VPC_us_east.default_route_table_id
+resource "aws_default_route_table" "Dep6_west_RT" {
+  default_route_table_id = aws_vpc.Deployment6_VPC_us_west.default_route_table_id
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.Dep6_east_gw.id
+    gateway_id = aws_internet_gateway.Dep6_west_gw.id
   }
 }
 
@@ -164,9 +164,9 @@ resource "aws_default_route_table" "Dep6_east_RT" {
 ################################-OUTPUT BLOCK-##########################################
 
 output "instance_ip_1" {
-  value = aws_instance.bank_app.public_ip
+  value = aws_instance.bank_app_west.public_ip
 }
 
 output "instance_ip_2" {
-  value = aws_instance.bank_app2.public_ip
+  value = aws_instance.bank_app2_west.public_ip
 }
