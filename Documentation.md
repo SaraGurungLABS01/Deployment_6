@@ -90,3 +90,6 @@ Please refer to the following link for step-by-step instructions:
 ## Updating Database Endpoints
 
 To ensure seamless functionality between your application and the AWS RDS database an update to the MySQL endpoints in your application files was made. By making these adjustments, a secure connection was established to the RDS database, allowing the application to efficiently store, retrieve, and manage data. Key areas to modify include the `DATABASE_URL` configuration in the application files, `database.py`, `load_data.py`, and `app.py`. This ensures that the application operates correctly and utilizes the RDS database effectively, enabling smooth data management and proper application functionality.
+
+## Configure AWS credentials in Jenkins 
+Please refer to the following link for step-by-step instructions: [How to Configure AWS credentials in  Jenkins](https://scribehow.com/shared/How_to_Securely_Configure_AWS_Access_Keys_in_Jenkins__MNeQvA0RSOWj4Ig3pdzIPw)https://scribehow.com/shared/How_to_Securely_Configure_AWS_Access_Keys_in_Jenkins__MNeQvA0RSOWj4Ig3pdzIPw
